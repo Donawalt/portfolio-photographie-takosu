@@ -10,12 +10,21 @@ import LocomotiveScroll from "locomotive-scroll";
 
   setTimeout(() => {
     const scroll = new LocomotiveScroll({
-      el: document,
+      el: document.querySelector('#js-scroll'),
       smooth: true,
       getSpeed: true,
       getDirection: true
     });
 
-    scroll.init();
+    scroll.on('call',(value,way,obj) => {
+      if(value === "autoplay"){
+        if(way === "enter"){
+          
+        } else{
+          
+        }
+      }
+    });
+
   }, 1000);
 })();
